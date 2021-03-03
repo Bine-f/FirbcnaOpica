@@ -2,17 +2,23 @@
 
 <body>
 <div class = "container">
-<h1>Answer</h1>
 %question = s["question"]
-Answer to question:
-<p>{{question}}</p>
+<p>Answer to question:</p>
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      <div class="p-3 border bg-light"><p><b>{{question}}</b></p></div>
+      </div>    
+  </div>
+</div>
+
 
 %for number in range(len(options)):
 %option= options[number]
 %s_n=str(number)
 <br>
 <form action="/answer" method="post">
-  {{option}} <input name = {{s_n}} value="select option" type="submit"class="btn btn-outline-success btn-sm"  />
+  {{option}} <input name = {{s_n}} value="select option" type="submit"class="btn btn-success"  />
 </form>
 <br>
 %end
@@ -21,12 +27,12 @@ Answer to question:
 <br>
 <form action="/answer" method="post">
   answer: <input type="text" name="add_answer" />
-   <input value="add" type="submit"class="btn btn-outline-success btn-sm"  />
+   <input value="add" type="submit"class= "btn btn-primary"  />
 </form>
 <br>
 <br>
 <form action="/answer" method="post">
-   <input name="forum" value="Forum" type="submit"class="btn btn-outline-success btn-sm"  />
+   <input name="forum" value="Forum" type="submit"class= "btn btn-secondary btn-lg"  />
 </form>
 <br>
 </div>

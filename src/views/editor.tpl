@@ -8,7 +8,7 @@
 <br>
 <form action="/editor" method="post">
    <input type="text" name="question" />
-   <input value="Post question" type="submit" class="btn btn-primary"  />
+   <input value="Post question" type="submit" class="btn btn-success"  />
 </form>
 <br>
 %else:
@@ -18,7 +18,7 @@
 <br>
 <form action="/editor" method="post">
   Add option: <input type="text" name="add_option" />
-   <input value="Add option" type="submit" class="btn btn-primary"  />
+   <input value="Add option" type="submit" class="btn btn-success"  />
 </form>
 <br>
 
@@ -40,7 +40,7 @@
     </div>
     <div class="col">
       <form action="/editor" method="post">
- <input value="Remove option" name = {{s_n}}  type="submit" class="btn btn-primary"  />
+ <input value="Remove option" name = {{s_n}}  type="submit" class="btn btn-danger"  />
 </form>
     </div>
   </div>

@@ -8,7 +8,7 @@
 <br>
 <form action="/forum" method="post">
   Title of question: <input type="text" name="add_title" />
-   <input value="Post title" type="submit"class="btn btn-outline-success btn-sm"  />
+   <input value="Post title" type="submit"class="btn btn-primary btn-lg"  />
 </form>
 <br>
 
@@ -25,7 +25,7 @@
   <div class="row">
     <div class="col">
       <form action="/forum" method="post">
- <input value="VIEW QUESTION" name = {{i}}  type="submit"class="btn btn-outline-success btn-sm"  />
+ <input value="VIEW QUESTION" name = {{i}}  type="submit"class="btn btn-primary"  />
 </form>
     </div>
     <div class="col-6">
@@ -39,6 +39,6 @@
 %end
 <br>
 <form action="/forum" method="post">
-   <input name="login" value="login" type="submit"class="btn btn-outline-success btn-sm"  />
+   <input name= "login" value= "Login" type = "submit" class = "btn btn-secondary btn-lg"  />
 </form>
 <br>
