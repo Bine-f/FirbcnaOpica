@@ -7,7 +7,7 @@
 <form action="/login" method="post">
     Username: <input name="username" type="text" placeholder= "Username" class="btn btn-outline-primary btn-sm" />
     Password: <input name="password" type="password" placeholder= "Password"  class="btn btn-outline-primary btn-sm"/>
-    <input value="Login" type="submit" class="btn btn-outline-success btn-sm"/>
+    <input value="Login" type="submit" class="btn btn-success"/>
 </form>
 <br>
 <p><b>Sign in:</b></p>
