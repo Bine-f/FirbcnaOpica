@@ -1,43 +1,4 @@
 {
     "users": [
-        {
-            "username": "hahaha",
-            "password": "a"
-        },
-        {
-            "username": "lalala",
-            "password": "a"
-        },
-        {
-            "username": "skkkr",
-            "password": "a"
-        }
-    ],
-    "hahaha_Kako smo?": {
-        "owner": "hahaha",
-        "title": "Kako smo?",
-        "likes": 0,
-        "question": "kako smo?",
-        "dislikes": 0,
-        "answers": [
-            "urrreeeeduuuu smo",
-            "skrrrk"
-        ],
-        "options": {
-            "jaaa": 3,
-            "neeee": 4
-        }
-    },
-    "skkkr_ekatepekatecukateme": {
-        "owner": "skkkr",
-        "title": "ekatepekatecukateme",
-        "likes": 0,
-        "question": "on asf  Mia n isafu gfaj saf aAD ADA",
-        "dislikes": 0,
-        "answers": [],
-        "options": {
-            "Tilje": 0,
-            "Krompir ad as das": 0
-        }
-    }
+    ]
 }
