@@ -40,13 +40,6 @@
 %end
   </tbody>
   </table>
-
-
-<br>
-<form action="/answer" method="post">
-  <strong>ADD ANSWER</strong>: <input type="text" name="add_answer" />
-   <input value="Add" type="submit"class= "btn btn-primary"  />
-</form>
 <br>
 %answers = s["answers"]
 %if len(answers) != 0:
@@ -72,6 +65,12 @@
 </tbody>
 </table>
 <br>
+<br>
+<form action="/answer" method="post">
+  <strong>ADD NEW ANSWER</strong>: <input type="text" name="add_answer" />
+   <input value="Add" type="submit"class= "btn btn-primary"  />
+</form>
+
 <br>
 <form action="/answer" method="post">
    <input name="forum" value="Forum" type="submit"class= "btn btn-secondary btn-lg"  />
