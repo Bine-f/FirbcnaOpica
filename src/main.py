@@ -21,13 +21,6 @@ def main_page():
         user = "Guest"
     return bottle.template("login.tpl", name = user)
 
-@post('/')
-def main_page_action():
-    if request.forms.get("login"):
-        bottle.redirect('/login')
-    if request.forms.get("forum"):
-        bottle.redirect('/forum')
-
 @get('/login')
 def login():
     return bottle.template("login.tpl", name = request.get_cookie('account'))
@@ -71,12 +64,13 @@ def forum_action():
         title = request.forms.get("add_title")
         add_title(user, title)
         bottle.response.set_cookie("title", title)
-        bottle.response.set_cookie("number", str(len(list_of_titles())-1))        
+        bottle.response.set_cookie("number", str(len(list_of_titles()) -1))        
         bottle.redirect("/editor")
     if request.forms.get("login"):
+        bottle.response.delete_cookie("account")
         bottle.redirect('/login')
     for i in range(len(sets)):
-        if request.forms.get(str(i)):                       
+        if request.forms.get(str(i)):
             bottle.response.set_cookie("number", str(i))
             if list_of_sets()[i]["owner"] == user:
                 bottle.response.set_cookie("title", list_of_titles()[i])
@@ -145,8 +139,8 @@ def answer_action():
     name = find_name(list_of_sets()[n])
     s = find_set(name)
     if request.forms.get("add_answer"):
-        answer = request.forms.get("add_answer")
-        add_answer(name, answer)
+        new_answer = request.forms.get("add_answer")
+        add_answer(name, user, new_answer)
         bottle.redirect("/answer")
     for number in range(len(list_of_options(s))):
         if request.forms.get(str(number)):
