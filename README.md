@@ -7,7 +7,7 @@ Za delovanje kode ni potrebno naložiti nobenih špecialnih knjižnic, vsa potre
 
 ## Uporaba:
 
-Zagnati je potrebno kodo "main.py".
+Zagnati je potrebno kodo `main.py`.
 
 ## Viri in literatura:
 
