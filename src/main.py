@@ -10,7 +10,7 @@ bottle.BaseTemplate.defaults['get_url'] = app.get_url
 
 @bottle.route('/database/<filename:path>', name='database')
 def serve_static(filename):
-    return bottle.static_file(filename, root= os.path.join(os.getcwd(),'..', "database"))
+    return bottle.static_file(filename, root= os.path.join(os.getcwd(), '..', "database"))
 
 @get('/')
 def main_page():
@@ -84,7 +84,6 @@ def editor():
         user = request.get_cookie('account')
     if request.get_cookie('number'):
         s = list_of_sets()[int(request.get_cookie("number"))]
-
         return bottle.template("editor.tpl", s = s, options=list_of_options(s))
     return bottle.redirect("/login")
 
@@ -98,7 +97,6 @@ def editor_action():
     n = int(request.get_cookie("number"))   
     s = list_of_sets()[n]
     title = s["title"]
-
     if request.forms.get("question"):
         question = request.forms.get("question")
         add_question(user, title, question)
@@ -107,6 +105,9 @@ def editor_action():
         option = request.forms.get("add_option")
         add_option(user, title, option)
         bottle.redirect("/editor")
+    if request.forms.get("remove"):
+        remove_question(n)
+        bottle.redirect("/forum")
     if request.forms.get("forum"):
         bottle.redirect('/forum')
     if request.forms.get("login"):
@@ -128,12 +129,9 @@ def answer():
     return bottle.redirect("/login")
 
 @post('/answer')
-def answer_action():
-    
+def answer_action():    
     if not request.get_cookie('account'):
         bottle.redirect('/login')
-    if not request.get_cookie('title'):
-        bottle.redirect('/forum')
     user = request.get_cookie('account')
     n = int(request.get_cookie("number"))
     name = find_name(list_of_sets()[n])
@@ -144,7 +142,7 @@ def answer_action():
         bottle.redirect("/answer")
     for number in range(len(list_of_options(s))):
         if request.forms.get(str(number)):
-            choose_option(name,number)
+            choose_option(name, number)
             bottle.redirect("/answer")
     if request.forms.get("forum"):
         bottle.redirect('/forum')

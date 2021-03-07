@@ -124,3 +124,7 @@ def list_of_options(s):
         l.append(option)
     return l
 
+def remove_question(n):
+    data = read_json()
+    del data[find_name((list_of_sets()[n]))]
+    write_json(data)

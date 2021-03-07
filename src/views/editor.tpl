@@ -84,6 +84,13 @@
 <br>
 <div class="container">
 <form action="/editor" method="post">
+   <input name="remove" value="Remove question" type="submit" class="btn btn-danger btn-lg"  />
+</form>
+<br>
+
+</div>
+<div class="container">
+<form action="/editor" method="post">
    <input name="forum" value="Forum" type="submit" class="btn btn-secondary btn-lg"  />
 </form>
 <br>
