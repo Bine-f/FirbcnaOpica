@@ -8,12 +8,10 @@
     "user_Title": {
         "owner": "user",
         "title": "Title",
-        "likes": 0,
         "question": "Question",
-        "dislikes": 0,
         "answers": {},
         "options": {
-            "option": 0
+            "option1": 0
         }
     }
 }

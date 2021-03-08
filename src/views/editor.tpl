@@ -16,7 +16,7 @@
 <br>
 %else:
 %question = s["question"]
-<b> Qestion: {{question}} </b>
+<b> Question: {{question}} </b>
 %end
 </div>
 <br>

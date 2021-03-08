@@ -43,7 +43,7 @@ def add_account(username, password):
     
 def add_title(user,title):
     data = read_json()
-    data[f"{user}_{title}"] = {"owner": user,"title": title, "likes" : 0, "question": "", "dislikes" : 0, "answers" : dict(), "options":dict() }
+    data[f"{user}_{title}"] = {"owner": user,"title": title, "question": "", "answers" : dict(), "options":dict() }
     write_json(data)
 
 def add_question(user, title, question):    
